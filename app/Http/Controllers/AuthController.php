@@ -23,7 +23,7 @@ class AuthController extends Controller
     		return redirect()->intended('home');
     	}
 
-    	return back()->withInput();
+    	return back()->withInput()->withErrors(['email' => 'Username or password is invalid']);
     }
 
     public function logout()
