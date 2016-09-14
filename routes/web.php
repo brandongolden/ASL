@@ -23,6 +23,10 @@ Route::group(['middleware' => ['web']], function() {
 	Route::resource('users', 'UsersController', ['only' => ['create', 'store']]);
 
 
-	Route::get('/income', 'IncomeController@create');
+	Route::get('/income', ['as' => 'income', 'uses' => 'IncomeController@create']);
 	Route::post('/income', 'IncomeController@store');
+
+	Route::get('/bills', ['as' => 'bills', 'uses' => 'BillsController@create']);
+	Route::post('/bills', 'BillsController@store');
+
 });

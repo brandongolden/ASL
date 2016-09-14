@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-<h3>Homepage for user {{ \Auth::user()->name }}</h3>
+<h2>Homepage for user {{ \Auth::user()->name }}</h2>
 @endsection

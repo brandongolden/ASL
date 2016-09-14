@@ -10,16 +10,26 @@
 <ul class="nav nav-pills">
 	@if(\Auth::check())
 	<li>
+	{{ link_to_route('home', 'Home') }}
+	</li>
+	<li>
+	{{ link_to_route('income', 'Income') }}
+	</li>
+	<li>
+	{{ link_to_route('bills', 'Bills') }}
+	</li>
+	<li>
 	{{ link_to_route('logout', 'Logout') }}
 	</li>
 	@else
 	<li>
 	{{ link_to_route('login', 'Login') }}
-	</li>
-	@endif
+	</li>	
 	<li>
 	{{ link_to_route('users.create', 'New Users') }}
 	</li>
+	@endif
+
 </ul>
 @yield('content')
 </div>

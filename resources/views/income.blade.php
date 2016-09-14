@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-	<h1>My Income</h1>
+	<h2>My Income</h2>
 	<hr/>
 
 	{!! Form::open(['url' => '/income']) !!}

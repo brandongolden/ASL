@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 //use App\Http\Requests;
 use Auth;
 use Request;
+use App\User;
 class IncomeController extends Controller
 {
     public function create()
