@@ -9,11 +9,15 @@ use Illuminate\Support\Facades\DB;
 use Auth;
 use Request;
 use App\User;
+use PDO;
+
 class BillsController extends Controller
 {
     public function create()
-    {
-    	return view('bills');
+    {   
+
+        return view('bills');
+
     }
 
     public function store()
@@ -35,6 +39,6 @@ class BillsController extends Controller
 
 
 
-    	return redirect('home');
+    	return redirect('bills');
     }
 }
