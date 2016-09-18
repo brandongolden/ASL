@@ -24,6 +24,7 @@ class BillsController extends Controller
     {
     	$input_name = Request::get('name');
     	$input_payment = Request::get('payment');
+        $input_category = Request::get('category');
     	$clientid = Auth::user()->id;
 
 
@@ -31,7 +32,8 @@ class BillsController extends Controller
 			array(
 			    'name'     =>   $input_name, 
 			    'payment'   =>   $input_payment,
-			    'userid'	=>	$clientid
+			    'userid'	=>	$clientid,
+                'category' =>   $input_category
 			)
 		);
 

@@ -15,14 +15,15 @@
 		</div>
 		<div class="form-group">
 			{!! Form::label('category', 'Category:') !!}
-			{!! Form::select('cetegory', array(
+			{!!  Form::select('category', [
 			'1' => 'Credit Cards', 
 			'2' => 'Mortgage/Rent',
-			'3' => 'Insurance',
-			'4' => 'Phone/Internet',
-			'5' => 'Loans',
-			'6' => 'Other'
-			)) !!}
+			'3' => 'Utilities',
+			'4' => 'Insurance',
+			'5' => 'Phone/Internet',
+			'6' => 'Loans',
+			'7' => 'Other'
+			],  '1', ['class' => 'form-control' ]) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::submit('Submit', ['class' => 'btn btn-primary form-control']) !!}
@@ -40,11 +41,29 @@
         $result = $stmt->fetchall(PDO::FETCH_ASSOC);
 
         echo '<table class="table table-striped">';
-        echo "<tr><th>Bill Name</th><th>Bill Payment</th></td>";
+        echo "<tr><th>Bill Name</th><th>Bill Payment</th><th>Category</th></td>";
         foreach ($result as $row) {
             $name = $row['name'];
             $payment = $row['payment'];
-            echo '<tr><td>' . $name . '</td><td>$' . $payment . '</td></tr>';
+            $category = $row['category'];
+
+            if ($category == "1") {
+            	$category = "Credit Cards";
+            } elseif ($category == "2") {
+            	$category = "Mortgage/Rent";
+            } elseif ($category == "3") {
+            	$category = "Utilites";
+            } elseif ($category ==  "4") {
+            	$category = "Insurance";
+            } elseif ($category == "5") {
+            	$category = "Phone/Internet";
+            } elseif ($category == "6") {
+            	$category = "Loans";
+            } elseif ($category == "7") {
+            	$category = "Other";
+            }
+
+            echo '<tr><td>' . $name . '</td><td>$' . $payment . '</td><td>' . $category . '</td></tr>';
         }
 	?>
 
