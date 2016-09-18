@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Auth;
 use Request;
 use App\User;
+use PDO;
 class IncomeController extends Controller
 {
     public function create()

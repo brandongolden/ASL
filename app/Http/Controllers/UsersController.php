@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use PDO;
 class UsersController extends Controller
 {
     /**

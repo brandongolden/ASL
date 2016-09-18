@@ -27,8 +27,6 @@ class BillsController extends Controller
     	$clientid = Auth::user()->id;
 
 
-
-
 	    DB::table('bills')->insert(
 			array(
 			    'name'     =>   $input_name, 
@@ -36,8 +34,6 @@ class BillsController extends Controller
 			    'userid'	=>	$clientid
 			)
 		);
-
-
 
     	return redirect('bills');
     }

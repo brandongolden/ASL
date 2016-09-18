@@ -14,6 +14,17 @@
 			{!! Form::text('payment', null, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
+			{!! Form::label('category', 'Category:') !!}
+			{!! Form::select('cetegory', array(
+			'1' => 'Credit Cards', 
+			'2' => 'Mortgage/Rent',
+			'3' => 'Insurance',
+			'4' => 'Phone/Internet',
+			'5' => 'Loans',
+			'6' => 'Other'
+			)) !!}
+		</div>
+		<div class="form-group">
 			{!! Form::submit('Submit', ['class' => 'btn btn-primary form-control']) !!}
 		</div>
 	{!! Form::close() !!}
@@ -36,4 +47,5 @@
             echo '<tr><td>' . $name . '</td><td>$' . $payment . '</td></tr>';
         }
 	?>
+
 @endsection
