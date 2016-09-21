@@ -41,7 +41,7 @@
         $result = $stmt->fetchall(PDO::FETCH_ASSOC);
 
         echo '<table class="table table-striped">';
-        echo "<tr><th>Bill Name</th><th>Bill Payment</th><th>Category</th><th>Delete</th></td>";
+        echo "<tr><th>Bill Name</th><th>Bill Payment</th><th>Category</th><th>Update</th><th>Delete</th></td>";
         foreach ($result as $row) {
         	$id = $row['id'];
             $name = $row['name'];
@@ -65,6 +65,7 @@
             }
 
             echo '<tr><td>' . $name . '</td><td>$' . $payment . '</td><td>' . $category . '</td>
+            <td><a href="update.php?id=' . $id . '">Update</a></td>
             <td><a href="delete.php?id=' . $id . '">Delete</a></td></tr>';
 
 
