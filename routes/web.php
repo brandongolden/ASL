@@ -29,4 +29,5 @@ Route::group(['middleware' => ['web']], function() {
 	Route::get('/bills', ['as' => 'bills', 'uses' => 'BillsController@create']);
 	Route::post('/bills', 'BillsController@store');
 
+
 });

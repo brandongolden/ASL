@@ -70,17 +70,17 @@
 
 
 
-	echo "User Income: " . $userIncome . "<br>";
-	echo "Bills: " . $userBills . "<br>";
-	echo "Balance: " . $balance . "<br><br>";
+	echo "User Income: $" . $userIncome . "<br>";
+	echo "Bills: $" . $userBills . "<br>";
+	echo "Balance: $" . $balance . "<br><br>";
 
-	echo "Credit Cards: " . $creditcards . "<br>";
-	echo "Mortgage/Rent: " . $mortgagerent . "<br>";
-	echo "Utilites: " . $utilites . "<br>";
-	echo "Insurance: " . $insurance . "<br>";
-	echo "Phone/Internet: " . $phoneinternet . "<br>";
-	echo "Loans: " . $loans . "<br>";
-	echo "Other: " . $other;
+	echo "Credit Cards: $" . $creditcards . "<br>";
+	echo "Mortgage/Rent: $" . $mortgagerent . "<br>";
+	echo "Utilites: $" . $utilites . "<br>";
+	echo "Insurance: $" . $insurance . "<br>";
+	echo "Phone/Internet: $" . $phoneinternet . "<br>";
+	echo "Loans: $" . $loans . "<br>";
+	echo "Other: $" . $other;
 ?>
 
 
