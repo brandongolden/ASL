@@ -121,7 +121,7 @@ var pieData = [
    {
       value: <?php echo $loans; ?>,
       label: 'Loans',
-      color: 'green'
+      color: 'navy'
    },
    {
       value : <?php echo $other; ?>,
@@ -136,12 +136,12 @@ var pieDataBalance = [
    {
       value: <?php echo $userBills; ?>,
       label: 'Bills',
-      color: 'midnightblue'
+      color: 'gray'
    },
    {
       value: <?php echo $balance; ?>,
       label: 'Balance',
-      color: 'indigo'
+      color: 'green'
    }
 ];
 var contextBalance = document.getElementById('balance').getContext('2d');
@@ -155,7 +155,7 @@ var balanceChart = new Chart(contextBalance).Pie(pieDataBalance);
 	<tr><td><i class="fa fa-paint-brush" style="color:red;" aria-hidden="true"></i> Utilites</td><td>$<?php echo $utilites; ?></td></tr>
 	<tr><td><i class="fa fa-paint-brush" style="color:yellow;" aria-hidden="true"></i> Insurance</td><td>$<?php echo $insurance; ?></td></tr>
 	<tr><td><i class="fa fa-paint-brush" style="color:purple;" aria-hidden="true"></i> Phone/Internet</td><td>$<?php echo $phoneinternet; ?></td></tr>
-	<tr><td><i class="fa fa-paint-brush" style="color:green;" aria-hidden="true"></i> Loans</td><td>$<?php echo $loans; ?></td></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:navy;" aria-hidden="true"></i> Loans</td><td>$<?php echo $loans; ?></td></tr>
 	<tr><td><i class="fa fa-paint-brush" style="color:maroon;" aria-hidden="true"></i> Other</td><td>$<?php echo $other; ?></td></tr>
 </table>
 @endsection

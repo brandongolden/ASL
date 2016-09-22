@@ -1,0 +1,28 @@
+body {
+	background: #78BF65;
+	margin: 15px 0;
+}
+
+.container {
+	background: #fff;
+	border-radius: 18px;
+}
+
+h1, h2, h3 {
+	color: #507F44;
+}
+
+th {
+	background: #90E57A;
+	color: green;
+}
+
+.btn {
+	background: #507F44;
+	border: #507F44;
+}
+
+.btn:hover {
+	background: #78BF65;
+	border: #78BF65;
+}

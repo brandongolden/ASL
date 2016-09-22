@@ -21,13 +21,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Update Form</title>
+	<title>Personal Finance Manager</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 <div class="container">
-<h1>My Application</h1>
-	<h2>Update</h2>
+<h1>Personal Finance Manager</h1>
+	<h2>Update Bill</h2>
 	<hr>
 	<form action="update.php" method="POST">
 		<div class="form-group">
