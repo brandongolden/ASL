@@ -24,4 +24,5 @@
 	{!! Form::token() !!}
 	{!! Form::submit(null, array('class' => 'btn btn-default')) !!}
 	{!! Form::close() !!}
+	<br>
 @endsection

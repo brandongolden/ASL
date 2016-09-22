@@ -91,6 +91,9 @@
 <h3 style="float:left;">Balance</h3>
 <canvas id="balance" width="300" height="300" style="float:left;margin-bottom: 30px;"></canvas>
 
+<h4>My Monthly Income: <?php echo "$" . $userIncome; ?></h4>
+<h4>My Bills Total: <?php echo "$" . $userBills; ?></h4>
+<h4>Remaining Balance: <?php echo "$" . $balance; ?></h4>
 <script>
 var pieData = [
    {
@@ -140,7 +143,7 @@ var pieDataBalance = [
    },
    {
       value: <?php echo $balance; ?>,
-      label: 'Balance',
+      label: 'Remaining Balance',
       color: 'green'
    }
 ];

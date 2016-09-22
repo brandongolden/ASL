@@ -7,7 +7,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.min.js" type="text/javascript"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="http://localhost:8888/laravel5loginregistration.dev/public/main.css">
 </head>
 <body>
 <div class="container">
