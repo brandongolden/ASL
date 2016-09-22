@@ -70,11 +70,12 @@
 	}
 
 
-
+	/*
 	echo "User Income: $" . $userIncome . "<br>";
 	echo "Bills: $" . $userBills . "<br>";
 	echo "Balance: $" . $balance . "<br><br>";
-
+	*/
+	/*
 	echo "Credit Cards: $" . $creditcards . "<br>";
 	echo "Mortgage/Rent: $" . $mortgagerent . "<br>";
 	echo "Utilites: $" . $utilites . "<br>";
@@ -82,10 +83,14 @@
 	echo "Phone/Internet: $" . $phoneinternet . "<br>";
 	echo "Loans: $" . $loans . "<br>";
 	echo "Other: $" . $other . "<br>";
+	*/
 ?>
 
-<canvas id="bills" width="300" height="300"></canvas>
-<canvas id="balance" width="300" height="300"></canvas>
+<h3 style="float:left;">Bills</h3>
+<canvas id="bills" width="300" height="300" style="float:left;"></canvas>
+<h3 style="float:left;">Balance</h3>
+<canvas id="balance" width="300" height="300" style="float:left;margin-bottom: 30px;"></canvas>
+
 <script>
 var pieData = [
    {
@@ -121,7 +126,7 @@ var pieData = [
    {
       value : <?php echo $other; ?>,
       label: 'Other',
-      color: 'lime'
+      color: 'maroon'
    }
 ];
 var context = document.getElementById('bills').getContext('2d');
@@ -131,15 +136,26 @@ var pieDataBalance = [
    {
       value: <?php echo $userBills; ?>,
       label: 'Bills',
-      color: 'blue'
+      color: 'midnightblue'
    },
    {
       value: <?php echo $balance; ?>,
       label: 'Balance',
-      color: 'orange'
+      color: 'indigo'
    }
 ];
 var contextBalance = document.getElementById('balance').getContext('2d');
 var balanceChart = new Chart(contextBalance).Pie(pieDataBalance);
 </script>
+
+<table class="table table-striped">
+	<tr><th>Bill Category</th><th>Total</th></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:blue;" aria-hidden="true"></i> Credit Cards</td><td>$<?php echo $creditcards; ?></td></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:orange;" aria-hidden="true"></i> Mortgage/Rent</td><td>$<?php echo $mortgagerent; ?></td></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:red;" aria-hidden="true"></i> Utilites</td><td>$<?php echo $utilites; ?></td></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:yellow;" aria-hidden="true"></i> Insurance</td><td>$<?php echo $insurance; ?></td></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:purple;" aria-hidden="true"></i> Phone/Internet</td><td>$<?php echo $phoneinternet; ?></td></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:green;" aria-hidden="true"></i> Loans</td><td>$<?php echo $loans; ?></td></tr>
+	<tr><td><i class="fa fa-paint-brush" style="color:maroon;" aria-hidden="true"></i> Other</td><td>$<?php echo $other; ?></td></tr>
+</table>
 @endsection
