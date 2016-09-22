@@ -1,7 +1,8 @@
 <?php
-		$billid = $_POST['billid'];
-		$billname = $_POST['billname'];
+		$id = $_POST['billid'];
+		$name = $_POST['billname'];
 		$payment = $_POST['payment'];
+		$category = $_POST['category'];
 		
 
 		$user = "root";
@@ -11,17 +12,18 @@
 		$stmt = $dbh->prepare("
 		UPDATE bills  
   	 	SET 
-  	 	billname = :billname,
+  	 	name = :name,
        	payment = :payment,
+       	category = :category
  		WHERE 
- 		billid = :billid;
+ 		id = :id;
  		");
- 		$stmt->bindParam(':billid', $billid);
-		$stmt->bindParam(':billname', $billname);
+ 		$stmt->bindParam(':id', $id);
+		$stmt->bindParam(':name', $name);
 		$stmt->bindParam(':payment', $payment);
+		$stmt->bindParam(':category', $category);
 		$stmt->execute();
 
-			
 		header('Location: http://localhost:8888/laravel5loginregistration.dev/public/bills');
 		die();
 

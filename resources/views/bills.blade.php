@@ -65,7 +65,7 @@
             }
 
             echo '<tr><td>' . $name . '</td><td>$' . $payment . '</td><td>' . $category . '</td>
-            <td><a href="update.php?id=' . $id . '">Update</a></td>
+            <td><a href="updateform.php?id=' . $id . '">Update</a></td>
             <td><a href="delete.php?id=' . $id . '">Delete</a></td></tr>';
 
 

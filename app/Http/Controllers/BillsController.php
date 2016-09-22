@@ -20,7 +20,6 @@ class BillsController extends Controller
 
     }
 
-
     public function store()
     {
     	$input_name = Request::get('name');
