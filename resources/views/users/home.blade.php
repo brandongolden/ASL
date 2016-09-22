@@ -3,34 +3,7 @@
 @section('content')
 <h2>Homepage for user {{ \Auth::user()->name }}</h2>
 <hr />
-<canvas id="skills" width="300" height="300"></canvas>
 
-<script>
-var pieData = [
-   {
-      value: 25,
-      label: 'Java',
-      color: '#811BD6'
-   },
-   {
-      value: 10,
-      label: 'Scala',
-      color: '#9CBABA'
-   },
-   {
-      value: 30,
-      label: 'PHP',
-      color: '#D18177'
-   },
-   {
-      value : 35,
-      label: 'HTML',
-      color: '#6AE128'
-   }
-];
-var context = document.getElementById('skills').getContext('2d');
-var skillsChart = new Chart(context).Pie(pieData);
-</script>
 
 <?php
 	$clientid = Auth::user()->id;
@@ -108,8 +81,65 @@ var skillsChart = new Chart(context).Pie(pieData);
 	echo "Insurance: $" . $insurance . "<br>";
 	echo "Phone/Internet: $" . $phoneinternet . "<br>";
 	echo "Loans: $" . $loans . "<br>";
-	echo "Other: $" . $other;
+	echo "Other: $" . $other . "<br>";
 ?>
 
+<canvas id="bills" width="300" height="300"></canvas>
+<canvas id="balance" width="300" height="300"></canvas>
+<script>
+var pieData = [
+   {
+      value: <?php echo $creditcards; ?>,
+      label: 'Credit Cards',
+      color: 'blue'
+   },
+   {
+      value: <?php echo $mortgagerent; ?>,
+      label: 'Mortgage/Rent',
+      color: 'orange'
+   },
+   {
+      value: <?php echo $utilites; ?>,
+      label: 'Utilites',
+      color: 'red'
+   },
+   {
+      value : <?php echo $insurance; ?>,
+      label: 'Insurance',
+      color: 'yellow'
+   },
+   {
+      value: <?php echo $phoneinternet; ?>,
+      label: 'Phone/Internet',
+      color: 'purple'
+   },
+   {
+      value: <?php echo $loans; ?>,
+      label: 'Loans',
+      color: 'green'
+   },
+   {
+      value : <?php echo $other; ?>,
+      label: 'Other',
+      color: 'lime'
+   }
+];
+var context = document.getElementById('bills').getContext('2d');
+var billsChart = new Chart(context).Pie(pieData);
 
+var pieDataBalance = [
+   {
+      value: <?php echo $userBills; ?>,
+      label: 'Bills',
+      color: 'blue'
+   },
+   {
+      value: <?php echo $balance; ?>,
+      label: 'Balance',
+      color: 'orange'
+   }
+];
+var contextBalance = document.getElementById('balance').getContext('2d');
+var balanceChart = new Chart(contextBalance).Pie(pieDataBalance);
+</script>
 @endsection
